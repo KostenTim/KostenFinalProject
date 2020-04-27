@@ -167,8 +167,6 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
-
-
 INSERT INTO users (login, password, role) VALUES ('admin', 'f6fdffe48c908deb0f4c3bd36c032e72', 'adm');
 INSERT INTO users (login, password, role) VALUES ('client', 'd5bc32b75da65fe60067f501a4bb6665', 'user');
 
@@ -179,6 +177,9 @@ INSERT INTO carriages (carriages_name, max_place, cost_factor) VALUES ('common',
 INSERT INTO trains (name) VALUES ('829');
 INSERT INTO trains (name) VALUES ('912');
 INSERT INTO trains (name) VALUES ('764');
+INSERT INTO trains (name) VALUES ('459');
+INSERT INTO trains (name) VALUES ('111');
+INSERT INTO trains (name) VALUES ('441');
 
 INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (1, 1, 5);
 INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (1, 2, 3);
@@ -192,6 +193,18 @@ INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count
 INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (3, 2, 3);
 INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (3, 3, 3);
 
+INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (4, 1, 3);
+INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (4, 2, 3);
+INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (4, 3, 3);
+
+INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (5, 1, 0);
+INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (5, 2, 12);
+INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (5, 3, 0);
+
+INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (6, 1, 12);
+INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (6, 2, 1);
+INSERT INTO trains_has_carriages (trains_id_train, carriages_id_carriages, count_carriages ) VALUES (6, 3, 0);
+
 INSERT INTO station (name, time_to_station) VALUES ('A1' , '00:00:00');
 INSERT INTO station (name, time_to_station) VALUES ('A2' , '01:20:00');
 INSERT INTO station (name, time_to_station) VALUES ('A3' , '01:15:00');
@@ -204,6 +217,9 @@ INSERT INTO station (name, time_to_station) VALUES ('A8' , '01:00:00');
 INSERT INTO railway_route (id_train, start_way_date, start_way_time, free_place_type1, free_place_type2, free_place_type3) VALUES (1, '2020-05-10', '08:20:00', 180, 162, 0);
 INSERT INTO railway_route (id_train, start_way_date, start_way_time, free_place_type1, free_place_type2, free_place_type3) VALUES (2, '2020-05-04', '12:00:00', 0, 0, 840);
 INSERT INTO railway_route (id_train, start_way_date, start_way_time, free_place_type1, free_place_type2, free_place_type3) VALUES (3, '2020-05-12', '21:30:00', 108, 162, 210);
+INSERT INTO railway_route (id_train, start_way_date, start_way_time, free_place_type1, free_place_type2, free_place_type3) VALUES (4, '2020-05-08', '00:20:00', 108, 162, 210);
+INSERT INTO railway_route (id_train, start_way_date, start_way_time, free_place_type1, free_place_type2, free_place_type3) VALUES (5, '2020-05-09', '09:30:00', 0, 648, 0);
+INSERT INTO railway_route (id_train, start_way_date, start_way_time, free_place_type1, free_place_type2, free_place_type3) VALUES (6, '2020-05-17', '23:50:00', 432, 54, 0);
 
 INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (1, 1, '00:00:00');
 INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (2, 1, '00:15:00');
@@ -227,3 +243,23 @@ INSERT INTO station_has_railway_route (station_id_station, railway_route_id_rail
 INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (6, 3, '00:15:00');
 INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (8, 3, '00:00:00');
 
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (1, 4, '00:00:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (6, 4, '00:12:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (7, 4, '00:35:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (8, 4, '00:00:00');
+
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (1, 5, '00:00:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (2, 5, '00:25:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (3, 5, '00:10:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (4, 5, '00:40:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (5, 5, '00:05:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (6, 5, '00:10:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (7, 5, '00:25:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (8, 5, '00:00:00');
+
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (1, 6, '00:00:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (2, 6, '00:05:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (3, 6, '00:10:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (5, 6, '00:05:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (7, 6, '00:05:00');
+INSERT INTO station_has_railway_route (station_id_station, railway_route_id_railway_route, stop_time) VALUES (8, 6, '00:00:00');
