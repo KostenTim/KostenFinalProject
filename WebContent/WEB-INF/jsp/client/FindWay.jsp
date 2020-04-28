@@ -4,54 +4,75 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="css/style2.css">
 <meta charset="UTF-8">
 <title>Railroad</title>
 </head>
 <body>
+<header class="header">
+  <div class="logo-menu">
+  
+                <a href="#"><img class="logotip" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Train_Austria.svg" alt="logo">
+              </a>
+            
+              <nav class="menu">
+<ul>
+<li>
+<form action="Controller" method="Post">
+		<input  class="inputs" type="hidden" name="command" value="showTickets" />
+		<input id="btn1" class="btn" type="submit" value="${text.showTickets}" />
+	</form>
+</li>
+<li>
 <form action="Controller" method="Post">
 		<input type="hidden" name="command" value="translate" /> <input
-			type="hidden" name="leng" value="eng" /> <input type="submit"
+			type="hidden" name="leng" value="eng" /> <input class="translateButton" type="submit"
 			value="EN">
 	</form>
 
 	<form action="Controller" method="Post">
 		<input type="hidden" name="command" value="translate" /> <input
-			type="hidden" name="leng" value="rus" /> <input type="submit"
+			type="hidden" name="leng" value="rus" /> <input class="translateButton" type="submit"
 			value="RU">
 	</form>
-
-	<form action="Controller" method="Post">
-		<input class="inputs" type="hidden" name="command"
-			value="goToHomePage" /> <input type="submit" value="${text.home_page}" />
+  </li>
+  <li>
+    <form action="Controller" method="Post">
+		<input type="hidden" name="command"
+			value="goToHomePage" />
+			 <input id="btn1" class="btn" type="submit" value="${text.home_page}" />
 	</form>
-
-	<form action="Controller" method="Post">
-		<input class="inputs" type="hidden" name="command" value="logout" />
-		<input type="submit" value="${text.logout}" />
+  </li>
+    <li>
+      <form action="Controller" method="Post">
+		<input  type="hidden" name="command" value="logout" />
+		<input class="btn" type="submit" value="${text.logout}" />
 	</form>
+    </li>
+  </ul>  
+  </div>
 
-	<form action="Controller" method="Post">
-		<input class="inputs" type="hidden" name="command" value="showTickets" />
-		<input type="submit" value="${text.showTickets}" />
-	</form>
-	
-	<br> ${text.result_find_from} ${st1}--${st2}
-	<br>
-	<table cellspacing="2" border="1" cellpadding="5" width="600">
+ </nav>
+    </header>
+	<div class="mainMenu2">
+	 <p class="mainText">${text.result_find_from} ${st1}--${st2}</p>
+	 </div>
+	<div class="mainMenu">	
+	<table class="table" cellspacing="2" border="1" cellpadding="5" width="800">
 		<thead>
 			<tr>
-				<td>${text.rain_N}</td>
-				<td>${text.date_time_of_departure}</td>
-				<td>${text.departure_station}</td>
-				<td>${text.travel_time}</td>
-				<td>${text.date_time_of_arrival}</td>
-				<td>${text.arrival_station}</td>
-				<td>${text.book_compartment_train}</td>
-				<td>${text.prices_compartment_train}</td>
-				<td>${text.book_sleeper_train}</td>
-				<td>${text.prices_sleeper_train}</td>
-				<td>${text.book_train_carriage}</td>
-				<td>${text.prices_train_carriage}</td>
+				<td class="nameColonn">${text.rain_N}</td>
+				<td class="nameColonn">${text.date_time_of_departure}</td>
+				<td class="nameColonn">${text.departure_station}</td>
+				<td class="nameColonn">${text.travel_time}</td>
+				<td class="nameColonn">${text.date_time_of_arrival}</td>
+				<td class="nameColonn">${text.arrival_station}</td>
+				<td class="nameColonn">${text.book_compartment_train}</td>
+				<td class="nameColonn">${text.prices_compartment_train}</td>
+				<td class="nameColonn">${text.book_sleeper_train}</td>
+				<td class="nameColonn">${text.prices_sleeper_train}</td>
+				<td class="nameColonn">${text.book_train_carriage}</td>
+				<td class="nameColonn">${text.prices_train_carriage}</td>
 			</tr>
 		</thead>
 		<c:set var="k" value="0" />
@@ -72,35 +93,51 @@
 				<td>${item.cost_type3}</td>
 		</c:forEach>
 	</table>
-
-
+</div>
+<div class="selected">
 	<form action="Controller" method="Post">
 		<input type="hidden" name="command" value="showInfoTrin" />
-		 ${text.view_train_route_information_by_train_number} <select name="nameTrain">
+		<p class="mainText"> ${text.view_train_route_information_by_train_number}</p>
+		  <select class="select" name="nameTrain">
 			<c:set var="k" value="0" />
 			<c:forEach var="item" items="${WayShowForUser}">
 				<c:set var="k" value="${k+1}" />
 				<option value=${item.rain_number}>${item.rain_number}</option>
 			</c:forEach>
-		</select> <input type="submit" value="${text.SHOW_INFO}">
+		</select> <input class="btn2" type="submit" value="${text.SHOW_INFO}">
 	</form>
 	<br>
 
 	<form action="Controller" method="Post">
 		<input type="hidden" name="command" value="buyTicket" /> 
-		${text.buy_train_ticket_number} <select name="nameTrain">
+		<p class="mainText"> ${text.buy_train_ticket_number} </p>
+		<select class="select" name="nameTrain">
 			<c:set var="k" value="0" />
 			<c:forEach var="item" items="${WayShowForUser}">
 				<c:set var="k" value="${k+1}" />
 				<option value=${item.rain_number}>${item.rain_number}</option>
 			</c:forEach>
-		</select> ${text.place} <select name="place">
+		</select>
+		
+		 ${text.place}
+		 <select class="select" name="place">
 			<option value="compartment train">${text.compartment_train}</option>
 			<option value="sleeper train">${text.sleeper_train}</option>
 			<option value="train carriage">${text.train_carriage}</option>
-		</select> <input type="submit" value="${text.BUY}">
+		</select> <input class="btn2" type="submit" value="${text.BUY}">
+		<p class="err"> ${error} </p>
+	<p class="message">  ${message} </p>
 	</form>
-	<br> ${error} ${message}
+	</div>
+	
+	 <footer class="footer">
+
+  <div class="content-footer">
+    <p class="report">(EPAM-KNURE Java Training) 2020<b></b></p>
+   
+  </div>
+
+</footer>
 </body>
 </html>
 

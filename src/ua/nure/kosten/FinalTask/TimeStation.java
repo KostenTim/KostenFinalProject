@@ -11,7 +11,7 @@ import ua.nure.kosten.FinalTask.db.entity.RailwayRoute;
  * and time of departure and arrival
  * of the train at the station of the route.
  * 
- * @author t.Kosten
+ * @author T.Kosten
  * 
  */
 

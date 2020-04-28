@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 /**
  * This class is used for password processing.
  * 
- * @author t.Kosten
+ * @author T.Kosten
  * 
  */
 

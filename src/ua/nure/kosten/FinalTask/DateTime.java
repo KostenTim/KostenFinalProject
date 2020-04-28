@@ -6,7 +6,7 @@ import java.sql.Time;
 /**
  * This class is used to process data of type DATE and TIME.
  * 
- * @author t.Kosten
+ * @author T.Kosten
  * 
  */
 

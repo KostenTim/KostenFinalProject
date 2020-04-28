@@ -1,0 +1,57 @@
+body {
+	background-image: url(img/3.jpg);
+	color: white;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.main {
+	margin-left: 590px;
+	margin-top: 200px;
+	border-radius: 8%;
+	width: 173px;
+	background-image: url(6.jpg);
+}
+
+.err {
+	color: #ff7777;
+}
+
+.area {
+	padding: -50px;
+
+}
+.btn {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn2 {
+	width: 10%;
+	padding: 10px;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn2:hover {
+	border-radius: 8%;
+	background-color: #c0c0c0;
+	transition: 1s;
+}
+
+p {
+	width: 20px;
+	height: 50px;
+}
+
+.btn:hover {
+	border-radius: 8%;
+	background-color: #c0c0c0;
+	transition: 1s;
+}

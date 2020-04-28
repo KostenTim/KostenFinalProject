@@ -1,0 +1,235 @@
+body {
+	background-image: url(img/4.jpg);
+	height:100%;
+}
+header {
+	position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#435061;
+  flex-wrap:wrap;
+  width:100%;
+  justify-content:space-between;
+opacity: 0,5;
+height:100px;
+
+}
+.menu ul {
+list-style: none;
+display:flex;
+}
+
+.menu ul li {
+  width:100px;
+  transition: background 1s;
+  transition:padding 0.5s;
+
+}
+.menu ul li:hover {
+  display: block;
+    padding:5px; margin: 0px;
+      text-decoration:none;
+}
+.btn:hover {
+  color:#f68731;
+}
+#btn1 {
+	margin-left:-120px;
+}
+.btn{
+	margin-left:-20px;
+	padding: 10px;
+	border: none;
+	font: inherit;
+	color: white;
+	background-color: transparent;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.logo-menu a {
+  overflow-y:hidden;
+}
+
+  .logotip {
+cursor: initial;
+width:80px;
+height:auto;
+transition:width 1s;
+padding:15px 15px;
+  }
+
+  .logotip:hover {
+    width:90px;
+  }
+header .logo-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#435061;
+  flex-wrap:wrap;
+width:100%;
+}
+.translateButton {
+	margin-left:-900px;
+
+	padding: 10px;
+	border: none;
+	font: inherit;
+	color: white;
+	background-color: transparent;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	
+}
+.translateButton:hover{
+	background-color:#c0c0c0;
+}
+.main {
+	margin-left: 590px;
+	margin-top: 200px;
+	border-radius: 8%;
+	width: 173px;
+	background-image: url(6.jpg);
+}
+
+.mainMenu{
+	height:500px;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.btnMenu{
+	height:400px;
+	width:600px;
+	padding: 10px;
+	border: none;
+	font: inherit;
+	color: white;
+	background-color: transparent;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	transition: background-color 1s, color 1s;
+}
+.btnMenu:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+color:#f68731;
+}
+
+.err {
+	font-weight: 600;
+	color: #b90000;
+}
+.mainMenu{
+	height:500px;
+	align-items:center;
+	display:flex;
+	justify-content:center;
+}
+.table {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	border:none;
+}
+.nameColonn {
+	font-weight:600;
+}
+.mainMenu2{
+	align-items: center;
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+	margin-top: 50px;
+}
+.mainText {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight:600;
+}
+.btn2 {
+	border: none;
+	font: inherit;
+	background-color: transparent;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	transition: background-color 1s;
+font-weight:600;
+cursor:pointer;
+
+}
+.btn2:hover {
+	background-color:white;
+}
+.select {
+	font: 13px/34px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 0 #EEEEEE;
+  border-radius: 8px;
+  cursor:pointer;
+}
+
+
+
+
+.adminButton {
+    padding:20px 70px 20px 70px;
+	display:flex;
+	justify-content:space-between;
+}
+.inputText {
+	width:180px
+}
+.btnMenu2 {
+	height:40px;
+	padding: 10px;
+	border-radius:5px;
+	font: inherit;
+	color: white;
+	background-color: transparent;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	transition: background-color 1s, color 1s;
+}
+.btnMenu2:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+
+}
+.optionFind{
+	display:flex;
+	justify-content:center;
+}
+.selected {
+	display:flex;
+	justify-content:space-between;
+	padding: 0px 60px 0px 60px;
+}
+
+.message {
+	font-weight:600;
+	color: #000000;
+}
+.noTicket {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size:100px;
+}
+
+.footer {
+  width:100%;
+  margin-top:100px;
+  height:100%;
+  display:flex;
+  background-color: #435061;
+  justify-content:center;
+  align-content:center;
+  flex-direction:row;
+}
+
+
+.content-footer {
+  margin-left: 50px;
+  justify-content:center;
+  display:flex;
+  flex-direction:column;
+}
+.content-footer .report {
+  color:white;
+}
+.mainMenu3 {
+	height:200px;
+}
+

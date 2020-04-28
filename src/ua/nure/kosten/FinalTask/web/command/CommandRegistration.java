@@ -78,7 +78,13 @@ public class CommandRegistration extends Command {
 		User user1 = new User(login , Password.md5Coding(password1));
 		db.createNewUser(user1);
 		forward = Path.PAGE_INDEX;
-		String message = "registration completed successfully";
+		String message = "";
+		if ("rus".equals(text.getLg())){
+			 message = "регистрация прошла успешно";
+		} else {
+			 message = "registration completed successfully";
+		}	
+		
 		LOG.info("new user("+user+") registered");
 		request.setAttribute("messege", message);
 		session.setAttribute("lastForward", forward);
